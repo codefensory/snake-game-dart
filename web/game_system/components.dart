@@ -8,6 +8,13 @@ mixin Position on Node {
   num x = 0;
 
   num y = 0;
+
+  Point get position => Point(x, y);
+
+  set position(Point newPoint) {
+    x = newPoint.x;
+    y = newPoint.y;
+  }
 }
 
 mixin Figure on Position {
